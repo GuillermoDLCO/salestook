@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+     <title>Renaware</title>
+
+    <%= favicon_link_tag 'ViewUser/RW_logo.ico' %>
+
+    <%= stylesheet_link_tag 'ViewUsers/animate.css','data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag 'ViewUsers/bootstrap.min.css','data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag 'ViewUsers/colorbox.css','data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag 'ViewUsers/font-awesome.min.css','data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag 'ViewUsers/owl.carousel.min.css','data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag 'ViewUsers/owl.theme.default.min.css','data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag 'ViewUsers/responsive.css','data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag 'ViewUsers/style.css','data-turbolinks-track': 'reload' %>    
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+    <%= javascript_include_tag 'ViewUser/bootstrap.min.js', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'ViewUser/custom.js', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'ViewUser/gmap3.js', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'ViewUser/html5shiv.js', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'ViewUser/ini.isotope.js', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'ViewUser/isotope.js', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'ViewUser/jquery.colorbox.js', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'ViewUser/jquery.js', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'ViewUser/owl.carousel.min.js', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'ViewUser/respond.min.js', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'ViewUser/wow.min.js', 'data-turbolinks-track': 'reload' %>        
+
+  </head>
+
+  <body>
+
+  <div class="body-inner">
+
+    <div id="top-bar" class="top-bar">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-md-8 col-sm-6 col-xs-12">
+            <ul class="top-info">
+              <li>
+                <i class="fa fa-map-marker">&nbsp;</i>
+                <p class="info-text">Avenida Jorge Basadre 152, San Isidro, Lima 27, PE</p>            
+              </li>          
+            </ul>
+          </div>
+          <!--/ Top info end -->
+
+          <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 top-social text-right">
+            <ul class="unstyled">
+              <li>
+                <a title="Facebook" href="https://www.facebook.com/rwperuoficial/" target="_blank">
+                  <span class="social-icon"><i class="fa fa-facebook"></i></span>
+                </a>
+                <a title="Twitter" href="https://twitter.com/renaware" target="_blank">
+                  <span class="social-icon"><i class="fa fa-twitter"></i></span>
+                </a>
+                <a title="Instagram" href="https://www.instagram.com/renaware_/?hl=es-la" target="_blank">
+                  <span class="social-icon"><i class="fa fa-instagram"></i></span>
+                </a>
+                <a title="Linkdin" href="https://cl.linkedin.com/company/rena-ware-del-per%C3%BA-sa" target="_blank">
+                  <span class="social-icon"><i class="fa fa-github"></i></span>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <!--/ Top social end -->
+        </div>
+        <!--/ Content row end -->
+      </div>
+      <!--/ Container end -->
+    </div>
+    <!--/ Topbar end -->
+
+    <!-- Header start -->
+    <header id="header" class="header-one">
+
+
+      <nav class="site-navigation navigation navdown">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-12">
+              <div class="site-nav-inner pull-left">
+
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+
+                <div class="collapse navbar-collapse navbar-responsive-collapse">
+                  <ul class="nav navbar-nav">
+
+                    <li class="dropdown"></li>
+
+                    <%= image_tag("ViewUser/RW_logo.png", style: 'height:24%;width:24%;') %> 
+
+                    <li class="dropdown"></li>
+
+                    <li class="dropdown">
+                      <%= link_to "Inicio", root_path %>
+      <!--                 <a href="/home/index" class="dropdown-toggle" data-toggle="dropdown">Inicio
+                      </a> -->
+                    </li>
+
+                    <li class="dropdown"></li>
+                    <li><a href="/static/Nosotros">Nosotros </a></li>
+
+                    <li class="dropdown"></li>
+                    <li><a href="/static/Caracteristicas">Oportunidad </a></li>
+
+                    <li class="dropdown"></li>
+                    <li><a href="/static/Productos">Productos </a></li>
+
+                    <li class="dropdown"></li>
+                    <li><a href="/static/Contacto">Contacto </a></li>
+
+                    <li class="dropdown"></li>
+                    <li><a href="/login/login" target="_blank">Ingresar </a></li>
+
+                  </ul>
+                  <!--/ Nav ul end -->
+                </div>
+                <!--/ Collapse end -->
+
+              </div><!-- Site Navbar inner end -->
+
+            </div>
+            <!--/ Col end -->
+          </div>
+          <!--/ Row end -->
+
+        </div>
+        <!--/ Container end -->
+
+      </nav>
+      <!--/ Navigation end -->
+    </header>
+    <!--/ Header end -->
+
+ 
+
+
+
+
+    <!--/ News end -->
+  <!--/ 07042020 -->
+</div>
+
+        <%= yield %>
+
+
+        <div class="body-inner">
+
+    <footer id="footer" class="footer bg-overlay">
+      <div class="footer-main">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-4 col-sm-12 footer-widget footer-about">
+              <h3 class="widget-title">SOBRE NOSOTROS</h3>
+
+     <!--          <img class="footer-logo" src="images/footer-logo.png" alt="" /> -->
+             <%= image_tag("ViewUser/RW_logo.png", class: 'footer-logo' , style: 'height:60%;width:60%;') %> 
+
+              <p>Rena Ware está orgullosa de ser miembro de la Asociación de Ventas Directas (DSA), nos regimos por su Código de Ética.</p>
+<!--               <div class="footer-social">
+                <ul>
+                  <li><a href="https://www.facebook.com/rwperuoficial/" target="_blank"><i class="fa fa-facebook"></i></a></li>
+                  <li><a href="https://twitter.com/renaware" target="_blank"><i class="fa fa-twitter"></i></a></li>
+                  <li><a href="https://www.instagram.com/renaware_/?hl=es-la" target="_blank"><i class="fa fa-instagram"></i></a></li>
+                  <li><a href="https://cl.linkedin.com/company/rena-ware-del-per%C3%BA-sa" target="_blank"><i class="fa fa-github"></i></a></li>
+                </ul>
+              </div> -->
+            </div><!-- Col end -->
+
+            <div class="col-md-4 col-sm-12 footer-widget">
+              <h3 class="widget-title">ATENCIÓN</h3>
+              <div class="working-hours">
+Trabajamos 7 días a la semana, todos los días, excepto los días feriados más importantes Póngase en contacto con nosotros si tiene una emergencia, con nuestra línea directa y formulario de contacto.
+                <br><br> Lunes - Viernes: <span class="text-right">10:00 - 16:00 </span>
+                <br> Sabado: <span class="text-right">12:00 - 15:00</span>
+                <br> Domingo y Feriados: <span class="text-right">09:00 - 12:00</span>
+              </div>
+            </div><!-- Col end -->
+
+            <div class="col-md-4 col-sm-12 footer-widget">
+              <h3 class="widget-title">CONTACTESE CON NOSOTROS</h3>
+              <ul class="list-arrow">
+                  <li><a href="https://www.facebook.com/rwperuoficial/" target="_blank">FACEBOOK</a></li>
+                  <li><a href="https://twitter.com/renaware" target="_blank">TWITTER</a></li>
+                  <li><a href="https://www.instagram.com/renaware_/?hl=es-la" target="_blank">INSTAGRAM</a></li>
+                  <li><a href="https://cl.linkedin.com/company/rena-ware-del-per%C3%BA-sa" target="_blank">LINKEDIN</a></li>
+              </ul>
+            </div><!-- Col end -->
+
+
+          </div><!-- Row end -->
+        </div><!-- Container end -->
+      </div><!-- Footer main end -->
+
+      <div class="copyright">
+        <div class="container">
+          <div class="row">
+            <div class="col-xs-12 col-sm-12">
+              <center>
+              <div class="copyright-info">
+                <span>Copyright © 2020 - Renaware.com</span>
+              </div>
+            </center>
+            </div>
+
+
+          <div id="back-to-top" data-spy="affix" data-offset-top="10" class="back-to-top affix">
+            <button class="btn btn-primary" title="Back to Top">
+              <i class="fa fa-angle-double-up"></i>
+            </button>
+          </div>
+
+        </div><!-- Container end -->
+      </div><!-- Copyright end -->
+
+    </footer><!-- Footer end -->
+
+
+        </div>
+
+    <%= javascript_include_tag 'ViewUser/bootstrap.min.js', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'ViewUser/custom.js', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'ViewUser/gmap3.js', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'ViewUser/html5shiv.js', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'ViewUser/ini.isotope.js', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'ViewUser/isotope.js', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'ViewUser/jquery.colorbox.js', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'ViewUser/jquery.js', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'ViewUser/owl.carousel.min.js', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'ViewUser/respond.min.js', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'ViewUser/wow.min.js', 'data-turbolinks-track': 'reload' %>    
+        
+
+  </body>
+</html>
