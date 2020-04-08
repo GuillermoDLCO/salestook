@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'product/products'
   get 'static/Nosotros'
   get 'static/Caracteristicas'
   get 'static/Productos'

@@ -13,7 +13,6 @@
     <%= stylesheet_link_tag 'application', 'data-turbolinks-track': 'reload' %>
     <%= stylesheet_link_tag 'vendors/bootstrap/bootstrap.min.css','data-turbolinks-track': 'reload' %>
     <%= stylesheet_link_tag 'vendors/font-awesome/css/font-awesome.min.css','data-turbolinks-track': 'reload' %>
-    <%= stylesheet_link_tag 'vendors/nprogress/nprogress.css','data-turbolinks-track': 'reload' %>
     <%= stylesheet_link_tag 'vendors/iCheck/flat/green.css','data-turbolinks-track': 'reload' %>
     <%= stylesheet_link_tag 'vendors/bootstrap-progressbar/bootstrap-progressbar-3.3.4.min.css','data-turbolinks-track': 'reload' %>
     <%= stylesheet_link_tag 'vendors/jqvmap/jqvmap.min.css','data-turbolinks-track': 'reload' %>
@@ -25,6 +24,113 @@
   </head>
 
   <body class="nav-md">
+    <div class="container body">
+      <div class="main_container">
+        <div class="col-md-3 left_col">
+          <div class="left_col scroll-view">
+            <div class="navbar-inner" style="border: 0;">
+              <a href="/principal/home" class="site_title"><i class="fa fa-line-chart" aria-hidden="true"></i> <span>Renaware</span></a>
+            </div>
+
+            <div class="clearfix"></div>
+
+            <br />
+
+            <!-- sidebar menu -->
+            <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
+              <div class="menu_section">
+                
+                <ul class="nav side-menu">
+                  <li><a><i class="fa fa-edit"></i> Ventas <span class="fa fa-chevron-down"></span></a>
+                    <ul class="nav child_menu">
+                      <li><a href="/pedidos/pedidos">Pedidos</a></li>
+                      
+                      <li><a href="form_validation.html">Clientes</a></li>
+                    </ul>
+                  </li>
+                  <li><a><i class="fa fa-bar-chart-o"></i> Dashboard <span class="fa fa-chevron-down"></span></a>
+                    <ul class="nav child_menu">
+                      <li><a href="/principal/home">Estadistica</a></li>
+                    </ul>
+                  </li>
+                  
+                  <li><a><i class="fa fa-truck" aria-hidden="true"></i> Envíos <span class="fa fa-chevron-down"></span></a>
+                    <ul class="nav child_menu">
+                      <li><a href="/envio/envios">Seguimiento</a></li>
+                    </ul>
+                  </li>
+                  <li><a><i class="fa fa-table"></i> Informes <span class="fa fa-chevron-down"></span></a>
+
+                  </li>
+                  <li><a><i class="fa fa-bar-chart-o"></i> Productos <span class="fa fa-chevron-down"></span></a>
+                    <ul class="nav child_menu">
+                      <li><a href="/product/products">Product List</a></li>
+                    </ul>
+                   
+                  </li>
+                </ul>
+              </div>
+
+            </div>
+            <!-- /sidebar menu -->
+
+           
+          </div>
+        </div>
+
+        <!-- top navigation -->
+        <div class="top_nav">
+          <div class="nav_menu">
+              <div class="nav toggle">
+                <a id="menu_toggle"><i class="fa fa-bars"></i></a>
+              </div>
+              <nav class="nav navbar-nav navbar-right">
+              <ul >
+                <li class="" style="padding-left: 15px;">
+                  <a href="javascript:;" class="user-profile dropdown-toggle" aria-haspopup="true" id="navbarDropdown" data-toggle="dropdown" aria-expanded="false">
+                    <%= image_tag("img.jpg") %>Guillermo
+                  </a>
+                  <div class="dropdown-menu dropdown-usermenu pull-right" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item"  href="javascript:;"> Profile</a>
+                      <a class="dropdown-item"  href="javascript:;">
+                        <span>Settings</span>
+                      </a>
+                  <a class="dropdown-item"  href="javascript:;">Help</a>
+                    <a class="dropdown-item"  href="/login/login"><i class="fa fa-sign-out pull-right"></i> Log Out</a>
+                  </div>
+                </li>
+
+               
+              </ul>
+            </nav>
+          </div>
+        </div>
+        <!-- /top navigation -->
+
     <%= yield %>
+    
+<%= javascript_include_tag 'vendors/jquery/jquery.min.js', 'data-turbolinks-track': 'reload' %>
+<%= javascript_include_tag 'vendors/bootstrap/bootstrap.bundle.min.js', 'data-turbolinks-track': 'reload' %>
+<%= javascript_include_tag 'vendors/fastclick/fastclick.js', 'data-turbolinks-track': 'reload' %>
+<%= javascript_include_tag 'vendors/Chart.js/Chart.min.js', 'data-turbolinks-track': 'reload' %>
+<%= javascript_include_tag 'vendors/gauge.js/gauge.min.js', 'data-turbolinks-track': 'reload' %>
+<%= javascript_include_tag 'vendors/bootstrap-progressbar/bootstrap-progressbar.min.js', 'data-turbolinks-track': 'reload' %>
+<%= javascript_include_tag 'vendors/iCheck/icheck.min.js', 'data-turbolinks-track': 'reload' %>
+<%= javascript_include_tag 'vendors/skycons/skycons.js', 'data-turbolinks-track': 'reload' %>
+<%= javascript_include_tag 'vendors/Flot/jquery.flot.js', 'data-turbolinks-track': 'reload' %>
+<%= javascript_include_tag 'vendors/Flot/jquery.flot.pie.js', 'data-turbolinks-track': 'reload' %>
+<%= javascript_include_tag 'vendors/Flot/jquery.flot.time.js', 'data-turbolinks-track': 'reload' %>
+<%= javascript_include_tag 'vendors/Flot/jquery.flot.stack.js', 'data-turbolinks-track': 'reload' %>
+<%= javascript_include_tag 'vendors/Flot/jquery.flot.resize.js', 'data-turbolinks-track': 'reload' %>
+<%= javascript_include_tag 'vendors/flot-orderbars/jquery.flot.orderBars.js', 'data-turbolinks-track': 'reload' %>
+<%= javascript_include_tag 'vendors/flot-spline/jquery.flot.spline.min.js', 'data-turbolinks-track': 'reload' %>
+<%= javascript_include_tag 'vendors/flot.curvedlines/curvedLines.js', 'data-turbolinks-track': 'reload' %>
+<%= javascript_include_tag 'vendors/DateJS/date.js', 'data-turbolinks-track': 'reload' %>
+<%= javascript_include_tag 'vendors/jqvmap/jquery.vmap.js', 'data-turbolinks-track': 'reload' %>
+<%= javascript_include_tag 'vendors/jqvmap/jquery.vmap.world.js', 'data-turbolinks-track': 'reload' %>
+<%= javascript_include_tag 'vendors/jqvmap/jquery.vmap.sampledata.js', 'data-turbolinks-track': 'reload' %>
+<%= javascript_include_tag 'vendors/moment/moment.min.js', 'data-turbolinks-track': 'reload' %>
+<%= javascript_include_tag 'vendors/bootstrap-daterangepicker/daterangepicker.js', 'data-turbolinks-track': 'reload' %>
+<%= javascript_include_tag 'build/js/custom.min.js', 'data-turbolinks-track': 'reload' %>
   </body>
 </html>
