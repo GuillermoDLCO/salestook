@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'envio/envios'
+  get 'pedidos/pedidos'
   get 'product/products'
   get 'static/Nosotros'
   get 'static/Caracteristicas'
