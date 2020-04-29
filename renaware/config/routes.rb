@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  resources :users
+  resources :products
+
+  get 'principal/products', to: 'products#index'
   get 'envio/envios'
   get 'pedidos/pedidos'
   get 'product/products'
@@ -6,8 +10,11 @@ Rails.application.routes.draw do
   get 'static/Caracteristicas'
   get 'static/Productos'
   get 'static/Contacto'
-  get 'login/login'
+  get 'login'	=> "login#new"
+  post 'login' => "login#create"
+  get 'signup' => "users#new"
 
+  get 'principal' => "principal#home"
   # root 'principal#home'
   root 'home#index'
 

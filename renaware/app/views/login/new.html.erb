@@ -1,0 +1,30 @@
+<% provide(:title, "Log in") %>
+    <div>
+      <a class="hiddenanchor" id="signup"></a>
+      <a class="hiddenanchor" id="signin"></a>
+
+      <div class="login_wrapper">
+        <div class="animate form login_form">
+          <section class="login_content">
+    <%= form_for(:login, url: login_path) do |f| %>
+    <h1>Iniciar Sesión</h1>
+			<%= f.email_field :email, :class => "form-control", :placeholder => "Correo" %>
+			<%= f.password_field :password, :class => "form-control", :placeholder => "Password" %>
+      <br>
+      <div>
+        <%= f.submit "Ingresar", :class => "btn btn-default submit" %>
+      
+        <p>
+          Nuevo Usuario? <%= link_to "Registrese ahora!", signup_path %>
+        </p>
+
+      </div>
+    <% end%>
+    
+            
+          </section>
+        </div>
+
+       
+      </div>
+    </div>
