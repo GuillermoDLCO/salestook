@@ -9,7 +9,7 @@
       <div class="title_right">
         <div class="col-md-5 col-sm-5   form-group pull-right">
           <div class="input-group">
-            <div><a class="btn btn-primary" href="/principal/products/registrar">Nuevo Producto</a></div>
+            <div><a class="btn btn-primary" href="/principal/products/registrar">Nuevo Cliente</a></div>
           </div>
         </div>
       </div>
@@ -57,7 +57,6 @@
             <button type="button" class="btn btn-success btn-xs"><%= product.status %></button>
           </td>
           <td>
-          <td><%= link_to 'Show', product %></td>
           <td><%= link_to 'Edit', edit_product_path(product) %></td>
           <td><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %></td>
           </td>

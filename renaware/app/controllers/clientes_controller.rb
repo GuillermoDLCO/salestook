@@ -28,7 +28,7 @@ class ClientesController < ApplicationController
 
     respond_to do |format|
       if @cliente.save
-        format.html { redirect_to @cliente, notice: 'Cliente was successfully created.' }
+        format.html { redirect_to "/principal/clientes", notice: 'Cliente creado Exitosamente.' }
         format.json { render :show, status: :created, location: @cliente }
       else
         format.html { render :new }
@@ -42,7 +42,7 @@ class ClientesController < ApplicationController
   def update
     respond_to do |format|
       if @cliente.update(cliente_params)
-        format.html { redirect_to @cliente, notice: 'Cliente was successfully updated.' }
+        format.html { redirect_to "/principal/clientes", notice: 'Cliente was successfully updated.' }
         format.json { render :show, status: :ok, location: @cliente }
       else
         format.html { render :edit }
@@ -69,6 +69,6 @@ class ClientesController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def cliente_params
-      params.require(:cliente).permit(:name, :dni, :direccion, :email, :password)
+      params.require(:cliente).permit(:name, :dni, :direccion, :email)
     end
 end

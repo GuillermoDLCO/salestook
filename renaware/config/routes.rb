@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   get 'principal/products', to: 'products#index'
   get 'principal/products/registrar', to: 'products#new'
   get 'principal/clientes', to: 'clientes#index'
+  get 'principal/clientes/registrar', to: 'clientes#new'
   get 'envio/envios'
   get 'pedidos/pedidos'
   get 'product/products'
