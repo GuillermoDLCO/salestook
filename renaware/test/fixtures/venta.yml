@@ -1,0 +1,15 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  orden: MyString
+  monto: 1
+  status: MyString
+  cliente: one
+  product: one
+
+two:
+  orden: MyString
+  monto: 1
+  status: MyString
+  cliente: two
+  product: two

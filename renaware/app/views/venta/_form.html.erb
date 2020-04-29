@@ -1,0 +1,43 @@
+<%= form_with(model: ventum, local: true) do |form| %>
+  <% if ventum.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(ventum.errors.count, "error") %> prohibited this ventum from being saved:</h2>
+
+      <ul>
+        <% ventum.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :orden %>
+    <%= form.text_field :orden, :class => "form-control" %>
+  </div>
+
+  <div class="field">
+    <%= form.label :monto %>
+    <%= form.number_field :monto, :class => "form-control" %>
+  </div>
+
+  <div class="field">
+    <%= form.label :status %>
+    <%= form.select :status, options_for_select([["Seleccione...", ""], "Pagado", "Pendiente Verificacion", "Cancelado", "Entregado"]), :class => 'form-control' %>
+  </div>
+
+  <div class="field">
+    <%= form.label :cliente_id %>
+    <%= form.select :cliente_id, Cliente.all.collect {|e| [e.name, e.id]} , { :include_blank => "Seleccione" }, { :class => "form-control" } %>
+  </div>
+
+  <div class="field">
+    <%= form.label :product_id %>
+    <%= form.select :product_id, Product.all.collect {|e| [e.name, e.id]} , { :include_blank => "Seleccione" }, { :class => "form-control" } %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit  "Registrar Venta"%>
+  </div>
+<% end %>
+<%= link_to 'Back', venta_path %>

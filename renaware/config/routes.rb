@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :venta
   resources :clientes
   resources :users
   resources :products
@@ -7,6 +8,8 @@ Rails.application.routes.draw do
   get 'principal/products/registrar', to: 'products#new'
   get 'principal/clientes', to: 'clientes#index'
   get 'principal/clientes/registrar', to: 'clientes#new'
+  get 'principal/ventas', to: 'venta#index'
+  get 'principal/ventas/registrar', to: 'venta#new'
   get 'envio/envios'
   get 'pedidos/pedidos'
   get 'product/products'
