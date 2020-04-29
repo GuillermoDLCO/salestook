@@ -1,10 +1,11 @@
 
 <div class="right_col" role="main">
-  <p id="notice"><%= notice %></p>
+<!--   <p id="notice"><%= notice %></p>
+   <p id="notice"><%= notice %></p> -->
   <div class="">
     <div class="page-title">
       <div class="title_left">
-        <h3>Clientes </h3>
+        <h3>Listado de Clientes </h3>
       </div>
 
       <div class="title_right">
@@ -19,7 +20,7 @@
     <table class="table table-striped projects">
       <thead>
         <tr>
-          <th>Name</th>
+          <th>Nombre</th>
           <th>Dni</th>
           <th>Direccion</th>
           <th>Email</th>
@@ -34,8 +35,8 @@
           <td><%= cliente.dni %></td>
           <td><%= cliente.direccion %></td>
           <td><%= cliente.email %></td>
-          <td><%= link_to 'Edit', edit_cliente_path(cliente) %></td>
-          <td><%= link_to 'Destroy', cliente, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          <td><%= link_to 'Editar', edit_cliente_path(cliente) %></td>
+          <td><%= link_to 'Eliminar', cliente, method: :delete, data: { confirm: 'Desea eliminar?' } %></td>
         </tr>
 
         <% end %>

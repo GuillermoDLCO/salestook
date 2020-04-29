@@ -3,7 +3,7 @@
   <div class="">
     <div class="page-title">
       <div class="title_left">
-        <h3>Ventas</h3>
+        <h3>Listado de Ventas</h3>
       </div>
 
       <div class="title_right">
@@ -21,9 +21,9 @@
         <tr>
           <th>Orden</th>
           <th>Monto</th>
-          <th>Status</th>
+          <th>Estado</th>
           <th>Cliente</th>
-          <th>Product</th>
+          <th>Producto</th>
           <th colspan="3"></th>
         </tr>
       </thead>
@@ -36,9 +36,9 @@
           <td><%= ventum.status %></td>
           <td><%= ventum.cliente_id %></td>
           <td><%= ventum.product_id %></td>
-          <td><%= link_to 'Show', ventum %></td>
-          <td><%= link_to 'Edit', edit_ventum_path(ventum) %></td>
-          <td><%= link_to 'Destroy', ventum, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+<!--           <td><%= link_to 'Show', ventum %></td> -->
+          <td><%= link_to 'Editar', edit_ventum_path(ventum) %></td>
+          <td><%= link_to 'Eliminar', ventum, method: :delete, data: { confirm: 'Desea Eliminar?' } %></td>
         </tr>
         <% end %>
       </tbody>

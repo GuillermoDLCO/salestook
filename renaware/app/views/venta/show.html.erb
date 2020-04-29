@@ -1,5 +1,5 @@
 <p id="notice"><%= notice %></p>
-
+<div class="right_col" role="main">
 <p>
   <strong>Orden:</strong>
   <%= @ventum.orden %>
@@ -25,5 +25,6 @@
   <%= @ventum.product_id %>
 </p>
 
-<%= link_to 'Edit', edit_ventum_path(@ventum) %> |
-<%= link_to 'Back', venta_path %>
+<%= link_to 'Guardar', edit_ventum_path(@ventum) %> |
+<%= link_to 'Regresar', venta_path %>
+</div>
