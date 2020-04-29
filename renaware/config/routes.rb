@@ -1,8 +1,11 @@
 Rails.application.routes.draw do
+  resources :clientes
   resources :users
   resources :products
 
   get 'principal/products', to: 'products#index'
+  get 'principal/products/registrar', to: 'products#new'
+  get 'principal/clientes', to: 'clientes#index'
   get 'envio/envios'
   get 'pedidos/pedidos'
   get 'product/products'
